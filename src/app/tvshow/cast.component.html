@@ -1,0 +1,18 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date of birth</th>
+      <th scope="col">Character</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of cast; index as i;">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{c.person.name | uppercase}}</td>
+      <td>{{c.person.birthday | date : "mediumDate"}}</td>
+      <td>{{c.character.name | titlecase}}</td>
+    </tr>
+  </tbody>
+</table>
